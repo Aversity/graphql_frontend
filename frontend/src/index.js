@@ -3,31 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from "@apollo/client"
 
-export const client = new ApolloClient({
-  uri: 'https://localhost:5001/graphql',
-  cache: new InMemoryCache()
-})
-
-client.query({
-  query: gql`
-      query Author {
-          authors{
-              id
-              lastName
-              firstName
-          }
-      }
-  `
-}).then(result => console.log(result))
 
 
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+    <App />,
     document.getElementById('root')
 );
 
