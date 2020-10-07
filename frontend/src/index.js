@@ -4,8 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-
-
+//Der Entry Point bleibt gleich
 
 ReactDOM.render(
     <App />,

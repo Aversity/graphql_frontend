@@ -4,6 +4,11 @@ import { LOGIN } from "./Query/q_login";
 import Getlist from "./Getlist";
 import PostBlog from "./PostBlog";
 
+//es werden Hooks genutzt, weil es mit den Apollo Hooks dann unkomplizierter ist
+//die useState Hooks geben an wie der leere State heißt und dann die Funktion um den State zu ändern -> todoInputMail = Statename | setTodoInputMail = Funktion
+//useMutation gibt als erstes die Funktion an, dann die Konstanten wo die Rückgabe der Query reingeschrieben wird
+//im useMutation Hook gibt es wird die Query angegeben und die errorPolicy ist da, damit die App bei einem Fehler z.B. falsches Login nicht gleich crashed 
+
 export default function Login() {
     const [todoInputMail, setTodoInputMail] = useState('')
     const [todoInputPassword, setTodoInputPassword] = useState('')
